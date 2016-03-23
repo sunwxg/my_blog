@@ -1,0 +1,10 @@
+baseurl = "http://sunwxg.github.io/"
+languageCode = "en-us"
+title = "Sun Wang's Blog"
+theme = "my_theme"
+canonifyurls = true
+paginate = 3
+
+[Params]
+  author = "Sun Wang"
+  toc = true

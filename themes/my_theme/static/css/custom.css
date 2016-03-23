@@ -1,0 +1,29 @@
+/* Please override here. */
+
+/*@font-face {*/
+    /*font-family: "Cantarell";*/
+    /*src: url("/fonts/Cantarell-Regular-webfont.woff") format('woff');*/
+/*}*/
+
+/*body {*/
+    /*font-family: 'Cantarell', sans-serif;*/
+    /*link: #0000EE;*/
+    /*active: #551A8B;*/
+/*}*/
+
+A:link {
+	 COLOR: #0000FF  /*The color of the link*/
+}
+
+A:visited {
+	 COLOR: #800080 /*The color of the visited link*/
+}
+
+A:hover {
+	 COLOR: green /*The color of the mouseover or 'hover' link*/
+}
+
+pre {
+    border-width:2px;
+    border-style:solid;
+}

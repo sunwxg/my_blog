@@ -1,0 +1,17 @@
+BaseUrl: "http://sunwxg.github.io"
+LanguageCode: "en-us"
+Title: ""
+
+Params:
+  Author: "Sun Wang"
+  DateForm: "Mon, Jan 2, 2006"
+  SyntaxHighlightTheme: "solarized_dark.min.css"
+
+Indexes:
+  tag: "tags"
+
+permalinks:
+  post: /blog/:year/:month/:day/:title/
+
+MetadataFormat: "yaml"
+

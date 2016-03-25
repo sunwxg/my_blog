@@ -27,7 +27,7 @@ From 20 tasks we can learn many useful knowledge. Like we find a way in the fore
 
 I took one year to finish this challenge. I'm number 84 to pass it.
 
-Now send email to atttend challenge, you will open the linux kernel programming door.
+Now send email and atttend challenge, you will open the linux kernel programming door.
 
 
 

@@ -1,0 +1,14 @@
+<aside class="col-md-4">
+
+  {{ range $key, $value := .Site.Taxonomies }}
+  <div class="well">
+    <h3 class="text-capitalize">{{ $key | singularize }}</h3>
+    <ul class="list-unstyled">
+      {{ range first 10 $value.ByCount }}
+      <li><a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+</aside>

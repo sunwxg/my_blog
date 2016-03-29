@@ -7,5 +7,8 @@ tags = []
 categories = []
 +++
 
-from sun wang's blog.
+Sun Wang's blog.
+
+[github](http://sunwxg.github.com)
+[email](mailto:sun.wxg@gmail.com)
 

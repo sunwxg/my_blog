@@ -70,3 +70,5 @@ sudo reboot
 ```
 
 Now WiFi work well.
+
+If you meet any other problem, you can reference dirver [release note](http://www.broadcom.com/docs/linux_sta/README_6.30.223.271.txt).

@@ -9,6 +9,6 @@ categories = []
 
 Sun Wang's blog.
 
-[github](http://sunwxg.github.com)
-[email](mailto:sun.wxg@gmail.com)
+* [github](http://github.com/sunwxg)
+* [email](mailto:sun.wxg@gmail.com)
 

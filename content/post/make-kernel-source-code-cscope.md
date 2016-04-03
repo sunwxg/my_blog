@@ -1,9 +1,10 @@
 +++
-title = "Create cscope log for linux kernel source code"
+title = "Create cscope database for linux kernel source code"
 description = ""
 
 tags = [
     "linux",
+    "kernel",
 ]
 date = "2016-04-03"
 categories = [

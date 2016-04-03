@@ -6,7 +6,7 @@
       <header class="title"><h1>{{ .Title }}</h1></header>
 
       <div class="articles">
-          {{ range (.Paginate .Data.Pages).Pages }}
+          {{ range (.Paginate .Data.Pages 8).Pages }}
             {{ .Render "li" }}
           {{ end }}
       </div>

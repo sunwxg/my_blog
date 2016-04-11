@@ -1,6 +1,6 @@
 +++
-title = "Use libwireshark decoding PACP files"
-description = "Use libwireshark library to decode PACP file in C code."
+title = "Use libwireshark decoding PCAP files"
+description = "Use libwireshark library to decode PCAP file in C code."
 
 tags = [
     "wireshark",
@@ -32,11 +32,37 @@ cfile.epan->get_frame_ts = tshark_get_frame_ts;
 
 Second read and decode packet.
 
-```C
-epan_dissect_t *edt;
+Function ` wtap_read` read one packet from file.
 
-/* all the decoded data store in struct edt */
-read_packet(&edt);
+Function `epan_dissect_new` create a new `struct epan_dissect_t`.
+
+Function `epan_dissect_run` decode packet.
+
+```C
+if (wtap_read(cfile.wth, &err, &err_info, &data_offset)) {
+
+	cfile.count++;
+
+	frame_data fdlocal;
+	frame_data_init(&fdlocal, cfile.count, whdr, data_offset, cum_bytes);
+
+	edt = epan_dissect_new(cfile.epan, TRUE, TRUE);
+
+	frame_data_set_before_dissect(&fdlocal, &cfile.elapsed_time, &cfile.ref, cfile.prev_dis);
+	cfile.ref = &fdlocal;
+
+	epan_dissect_run(edt, cfile.cd_t, &(cfile.phdr), frame_tvbuff_new(&fdlocal, buf), &fdlocal, &cfile.cinfo);
+
+	frame_data_set_after_dissect(&fdlocal, &cum_bytes);
+	cfile.prev_cap = cfile.prev_dis = frame_data_sequence_add(cfile.frames, &fdlocal);
+
+	//free space
+	frame_data_destroy(&fdlocal);
+
+	*edt_r = edt;
+	return TRUE;
+}
+return FALSE;
 ```
 
 Print out packet.

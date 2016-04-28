@@ -30,6 +30,6 @@ I change font scaling to `1.2`.
 
 <img src="/img/fonts_size.png" style="max-width:100%">
 
-* Reboot laptop, now you will get comfortable display.
+* Reboot laptop, you will get comfortable display.
 
 <img src="/img/full_screen.png" style="max-width:100%">

@@ -19,7 +19,7 @@ Open `System Setting` -> `Language Support`. Press `Install/Remove Languages...`
 
 * Active fcitx input frame work
 
-```
+```sh
 im-config
 ```
 

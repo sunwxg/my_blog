@@ -14,7 +14,7 @@ categories = [
 When using libwireshark library decoding packet, the decoded data is stored in `struct epan_dissect`.
 We can browse this struct to search or display packet data.
 
-```
+```c
 struct epan_dissect {
 	struct epan_session *session;
 	tvbuff_t	*tvb;
@@ -25,7 +25,7 @@ struct epan_dissect {
 
 `epan_dissect->tree` points to data struct tree.
 
-```
+```c
 typedef proto_node proto_tree;
 typedef struct _proto_node {
 	struct _proto_node *first_child;
@@ -37,7 +37,7 @@ typedef struct _proto_node {
 } proto_node;
 ```
 
-```
+```c
 typedef struct field_info {
 	header_field_info	*hfinfo; /**< pointer to registered field information */
 	...
@@ -45,7 +45,7 @@ typedef struct field_info {
 } field_info;
 ```
 
-```
+```c
 typedef struct _header_field_info header_field_info;
 struct _header_field_info {
 	const char	*name;    /**< [FIELDNAME] full name of this field */
@@ -63,7 +63,7 @@ The name is stored in `epan_dissect->tree->finfo->hfinfo->abbrev`.
 The value is stored in `epan_dissect->tree->finfo->value`.
 We can use function `fvalue_to_string_repr` to convert value to display format.
 
-```
+```c
 const char *name = node->finfo->hfinfo->abbrev;
 
 fvalue_t fv = node->finfo->value;
@@ -72,7 +72,7 @@ char *value = fvalue_to_string_repr(&fv, FTREPR_DISPLAY, NULL);
 
 After browsing the node of tree, we can print out the data of packet like this.
 
-```
+```sh
 [ip]
 . [ip.version] 4
 . [ip.hdr_len] 20

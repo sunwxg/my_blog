@@ -17,13 +17,13 @@ Following the [https://pages.github.com/](https://pages.github.com/) make a repo
 
 ## Install Jekyll
 
-```
+```sh
 apt-get install jekyll
 ```
 
 ## Create new jekyll site
 
-```
+```sh
 git clone https://github.com/sunwxg/sunwxg.github.io.git
 cd sunwxg.github.io
 jekyll new .
@@ -31,7 +31,7 @@ jekyll new .
 
 ## Browse your blog site
 
-```
+```sh
 jekyll build
 jekyll serve
 ```
@@ -43,7 +43,7 @@ Reference jekyll [manual](https://jekyllrb.com/docs/configuration/)
 
 ## Push to remote repository
 
-```
+```sh
 git push
 ```
 Browse [http//sunwxg.github.io](http://sunwxg.github.io)

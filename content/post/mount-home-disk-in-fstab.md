@@ -16,7 +16,7 @@ I need to add one line in `/etc/fstab` file.
 
 * Find `/dev/sda3` disk `UUID`.
 
-```
+```sh
 $ lsblk -o +UUID /dev/sda3
 NAME MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT UUID
 sda3   8:3    0 203.1G  0 part /home      c0b3529a-c9ef-4c92-88c2-b278a7c4111b
@@ -24,7 +24,7 @@ sda3   8:3    0 203.1G  0 part /home      c0b3529a-c9ef-4c92-88c2-b278a7c4111b
 
 * Add one line in `/etc/fstab` file.
 
-```
+```sh
 UUID=c0b3529a-c9ef-4c92-88c2-b278a7c4111b /home ext4 defaults,noatime 0 2
 ```
 

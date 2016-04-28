@@ -14,7 +14,7 @@ categories = [
 
 I often use cscope to browse linux kernel source code in Vim. It is very convenient.
 
-```
+```sh
 make cscope
 ```
 
@@ -24,6 +24,6 @@ But if we only use `make cscope`, we can't use cscope database in Vim. Because i
 
 We should use absolute file path. So we need to add one parameter `O=.`
 
-```
+```sh
 make O=. cscope
 ```

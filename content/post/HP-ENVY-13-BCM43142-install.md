@@ -14,7 +14,7 @@ categories = [
 
 HP ENVY13 laptop install Ubuntu 15.10, WiFi didn't work. Use `ifconfig` can't see wireless card, only see lo.
 
-```
+```sh
 $ ifconfig
 lo        Link encap:Local Loopback
           inet addr:127.0.0.1  Mask:255.0.0.0
@@ -28,7 +28,7 @@ lo        Link encap:Local Loopback
 
 Use `lspci` can find wireless card.
 
-```
+```sh
 $ lspci |grep Network
 01:00.0 Network controller: Broadcom Corporation BCM43142 802.11b/g/n (rev 01)
 ```
@@ -39,33 +39,33 @@ $ lspci |grep Network
 
 * Untar the downloaded file.
 
-```
+```sh
 mkdir bcm
 tar xzf hybrid-v35_64-nodebug-pcoem-6_30_223_271.tar.gz -C bcm
 ```
 
 * Build module.
 
-```
+```sh
 cd bcm
 make API=CFG80211
 ```
 
 * Install module.
 
-```
+```sh
 sudo make install
 depmod
 ```
 
 * Unload bcma module.
 
-```
+```sh
 echo "blacklist bcma" >> /etc/modprobe.d/blacklist.conf
 ```
 * Reboot laptop
 
-```
+```sh
 sudo reboot
 ```
 

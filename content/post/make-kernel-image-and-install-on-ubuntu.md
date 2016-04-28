@@ -18,13 +18,13 @@ If you want to use latest version kernel on your Ubuntu, you need to compile ker
 
 * Untar the downloaded files.
 
-```
+```sh
 tar xf linux-4.5.tar.xz
 ```
 
 * Prepare `.config` file.
 
-```
+```sh
 cd linux-4.5
 cp /boot/config-`uname -r` ./.config
 make menuconfig
@@ -37,13 +37,13 @@ Select `Exit`.
 
 * Make kernel image.
 
-```
+```sh
 sudo make-kpkg --initrd kernel_image
 ```
 
 * Install kernel image.
 
-```
+```sh
 sudo dpkg -i ../linux-image-4.5.0_4.5.0-10.00.Custom_amd64.deb
 ```
 
@@ -51,6 +51,6 @@ Now reboot PC, system will use the new kernel.
 
 If you want to remove one kernel image package, then
 
-```
+```sh
 sudo dpkg --purge linux-image-4.5.0+
 ```

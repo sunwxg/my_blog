@@ -15,7 +15,7 @@ We use Wireshark tool to decode IP packet and analyse signaling. If we want to w
 
 First do some initial work.
 
-```C
+```c
 init_process_policies();
 
 epan_init(register_all_protocols, register_all_protocol_handoffs, NULL, NULL);

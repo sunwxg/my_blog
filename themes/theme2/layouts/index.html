@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-10">
         {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 1000 }}
 	{{ range $paginator.Pages }}
             {{ .Render "li" }}

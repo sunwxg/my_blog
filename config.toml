@@ -1,7 +1,7 @@
 baseurl = "http://sunwxg.github.io/"
 languageCode = "en-us"
 title = "Sun Wang's Blog"
-theme = "theme2"
+theme = "my_theme"
 
 pygmentsStyle = "default"
 PygmentsCodeFences = "true"

@@ -23,13 +23,13 @@ sudo apt-get install gnome-tweak-tool
 
 * Change window scaling to `2`.
 
-<img src="/img/window_scaling.png" style="max-width:100%">
+<img src="/img/window_scaling.png" style="max-width:70%">
 
 * Change fonts scaling if you feel font size small still.
 I change font scaling to `1.2`.
 
-<img src="/img/fonts_size.png" style="max-width:100%">
+<img src="/img/fonts_size.png" style="max-width:70%">
 
 * Reboot laptop, you will get comfortable display.
 
-<img src="/img/full_screen.png" style="max-width:100%">
+<img src="/img/full_screen.png" style="max-width:70%">
